@@ -2,15 +2,14 @@
 
 ## How do I install these formulae?
 
-`brew install ldclabs/tap/<formula>`
+```sh
+brew install ldclabs/tap/anda
+```
 
-Or `brew tap ldclabs/tap` and then `brew install <formula>`.
-
-Or, in a `brew bundle` `Brewfile`:
-
-```ruby
-tap "ldclabs/tap"
-brew "<formula>"
+Or
+```sh
+brew tap ldclabs/tap
+brew install anda
 ```
 
 ## Documentation
