@@ -1,26 +1,26 @@
 class Anda < Formula
   desc "Local AI agent with a long-term memory brain"
   homepage "https://github.com/ldclabs/anda-bot"
-  version "0.4.4"
+  version "0.5.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ldclabs/anda-bot/releases/download/v0.4.4/anda-macos-arm64", using: :nounzip
-      sha256 "40c2fb409290fc8791d21448fda9825ed53f3503656df659fc35cf01129cbc8f"
+      url "https://github.com/ldclabs/anda-bot/releases/download/v0.5.0/anda-macos-arm64", using: :nounzip
+      sha256 "2e28c63f0fb0b4c2535eb6605b65ef052ea84bf1b4ff958815de254d09cce814"
     else
-      url "https://github.com/ldclabs/anda-bot/releases/download/v0.4.4/anda-macos-x86_64", using: :nounzip
-      sha256 "1895e19cf748f4626ceb112af3d6b16dc474512ad14d4127e1b02f460d4f023a"
+      url "https://github.com/ldclabs/anda-bot/releases/download/v0.5.0/anda-macos-x86_64", using: :nounzip
+      sha256 "9775ebfe430ba4e14c2cd441f314e9b500f66ec54790ba2a46776bdee7fc3658"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/ldclabs/anda-bot/releases/download/v0.4.4/anda-linux-arm64", using: :nounzip
-      sha256 "51aea5d6e23d0c41e4de7274d16aef39e0f940b3f18c5ff5ad21a0126250a53b"
+      url "https://github.com/ldclabs/anda-bot/releases/download/v0.5.0/anda-linux-arm64", using: :nounzip
+      sha256 "1d69bbc416dceca364e00e7a92968ed5c777d392aebcc56cc4814d287d8fbbe0"
     else
-      url "https://github.com/ldclabs/anda-bot/releases/download/v0.4.4/anda-linux-x86_64", using: :nounzip
-      sha256 "a89bb6a46f0f9aeba97f7f4f3a3aa2b72838adaf9a2f1e1c41f06ba40c79a837"
+      url "https://github.com/ldclabs/anda-bot/releases/download/v0.5.0/anda-linux-x86_64", using: :nounzip
+      sha256 "18dfae226606c727e6646bf2c4afc857650ab9726af60c35a45ea0548754f893"
     end
   end
 
@@ -28,6 +28,14 @@ class Anda < Formula
     binary = Dir["anda-*"].first
     chmod 0755, binary
     bin.install binary => "anda"
+  end
+
+  def caveats
+    <<~EOS
+      Homebrew does not write runtime files into ~/.anda during install.
+      To install or refresh curated skills, run:
+        anda update --skills-only
+    EOS
   end
 
   test do
