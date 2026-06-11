@@ -1,36 +1,36 @@
 class Anda < Formula
   desc "Local AI agent with a long-term memory brain"
   homepage "https://github.com/ldclabs/anda-bot"
-  version "0.9.5"
+  version "0.9.6"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ldclabs/anda-bot/releases/download/v0.9.5/anda-macos-arm64", using: :nounzip
-      sha256 "0d01fa1da0f21f2d06741afebb5cd234af19cf245438a4842a6d9a396be54f3a"
+      url "https://github.com/ldclabs/anda-bot/releases/download/v0.9.6/anda-macos-arm64", using: :nounzip
+      sha256 "bd840d2b8876fd868b8d906ad9af958ff7f74de7c49488a4b506458f4a59391c"
 
       resource "anda_launcher" do
-        url "https://github.com/ldclabs/anda-bot/releases/download/v0.9.5/anda_launcher-macos-arm64", using: :nounzip
-        sha256 "30872b0fc98e79e80609a16e57c8a6ddbd55c07cb3c99e67fd8ac5405fc0ba21"
+        url "https://github.com/ldclabs/anda-bot/releases/download/v0.9.6/anda_launcher-macos-arm64", using: :nounzip
+        sha256 "aa8c79f724a7d14baab1613404aba04a601f1ffadc1c1fba0fa29350ef1af594"
       end
     else
-      url "https://github.com/ldclabs/anda-bot/releases/download/v0.9.5/anda-macos-x86_64", using: :nounzip
-      sha256 "e07ea59d3940a6ee2da3ad21586c858a126b55aef5e71b9a50f97504edb5b659"
+      url "https://github.com/ldclabs/anda-bot/releases/download/v0.9.6/anda-macos-x86_64", using: :nounzip
+      sha256 "5e70662e7741548e4ffc28d3d69612f4bdd87cb7d69bec7ad2c4c6d134ca916f"
 
       resource "anda_launcher" do
-        url "https://github.com/ldclabs/anda-bot/releases/download/v0.9.5/anda_launcher-macos-x86_64", using: :nounzip
-        sha256 "9f2bd6a9f1c10c14af308e7148800a31427c1f7612f0784e35b9e8665a6ded42"
+        url "https://github.com/ldclabs/anda-bot/releases/download/v0.9.6/anda_launcher-macos-x86_64", using: :nounzip
+        sha256 "126e5fc9f4c49f3263af53a06af8cf96aa0bf539e59d9e573cb1f7cb76c6bf4c"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/ldclabs/anda-bot/releases/download/v0.9.5/anda-linux-arm64", using: :nounzip
-      sha256 "f91608367c6d3249af69174825d152fc555f4f6855c9ea594dd50ab80cec8986"
+      url "https://github.com/ldclabs/anda-bot/releases/download/v0.9.6/anda-linux-arm64", using: :nounzip
+      sha256 "5b5b6817a466f5b306691b67297fd9ac5ec6b5baa3fb4862395e881c91363b68"
     else
-      url "https://github.com/ldclabs/anda-bot/releases/download/v0.9.5/anda-linux-x86_64", using: :nounzip
-      sha256 "07a3da55e1a047df8dfb9b39ff2b3ac88d054de30531b65f451fe6a83032eb4d"
+      url "https://github.com/ldclabs/anda-bot/releases/download/v0.9.6/anda-linux-x86_64", using: :nounzip
+      sha256 "96a633d7c0c42769f61524d100e400b41a780d3c345c4d79a6e232f89be7cec3"
     end
   end
 
@@ -69,6 +69,6 @@ class Anda < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/anda --version")
-    assert (bin/"anda_launcher").exist? if OS.mac?
+    assert_path_exists bin/"anda_launcher" if OS.mac?
   end
 end
