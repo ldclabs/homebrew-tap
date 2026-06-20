@@ -1,36 +1,36 @@
 class Anda < Formula
   desc "Local AI agent with a long-term memory brain"
   homepage "https://github.com/ldclabs/anda-bot"
-  version "0.10.1"
+  version "0.10.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ldclabs/anda-bot/releases/download/v0.10.1/anda-macos-arm64", using: :nounzip
-      sha256 "c729dc6808d27ce3ab2f3b8f6dbd5440300428eb7c0d5fabd493f1c35b6ad2ea"
+      url "https://github.com/ldclabs/anda-bot/releases/download/v0.10.2/anda-macos-arm64", using: :nounzip
+      sha256 "ad53b2473351ae2c0b41e54effedfd313ab70c25b4c131eb1804d79f0da975b3"
 
       resource "anda_launcher" do
-        url "https://github.com/ldclabs/anda-bot/releases/download/v0.10.1/anda_launcher-macos-arm64", using: :nounzip
-        sha256 "1b56d8cf8e5cbb5ed62cefb6cfe9188869de85ceeef03d503ecdf6250d4c1fcb"
+        url "https://github.com/ldclabs/anda-bot/releases/download/v0.10.2/anda_launcher-macos-arm64", using: :nounzip
+        sha256 "99bbf46fe7371b26ff0bfc96bd5395b16ebc3285b5f031aeb81e09ca6d19f51f"
       end
     else
-      url "https://github.com/ldclabs/anda-bot/releases/download/v0.10.1/anda-macos-x86_64", using: :nounzip
-      sha256 "7b53e38142a0ecca506257ad58d6037445c8adef50fd7296ee13a3ab6f4733d9"
+      url "https://github.com/ldclabs/anda-bot/releases/download/v0.10.2/anda-macos-x86_64", using: :nounzip
+      sha256 "32bf5500dda9871a05541dff275cdab381fc452c885fe4c88e86398e27ed2e1a"
 
       resource "anda_launcher" do
-        url "https://github.com/ldclabs/anda-bot/releases/download/v0.10.1/anda_launcher-macos-x86_64", using: :nounzip
-        sha256 "e817d0800245a0ffd4bcde10b275016e8c042f9a2fb1351238e6ecddd9ac35a7"
+        url "https://github.com/ldclabs/anda-bot/releases/download/v0.10.2/anda_launcher-macos-x86_64", using: :nounzip
+        sha256 "47a1d9a09d98b3c1788da136affed010e491e62ac0799af5a35f4c3b0cb63124"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/ldclabs/anda-bot/releases/download/v0.10.1/anda-linux-arm64", using: :nounzip
-      sha256 "35da476332fa4f5751e7d810078e9824235614ae8ffbcb09b879ce1dd8fbd69a"
+      url "https://github.com/ldclabs/anda-bot/releases/download/v0.10.2/anda-linux-arm64", using: :nounzip
+      sha256 "debea78da9c5dd15cafb48fc254ebe911d74cea720d622c5f517103167a0e74e"
     else
-      url "https://github.com/ldclabs/anda-bot/releases/download/v0.10.1/anda-linux-x86_64", using: :nounzip
-      sha256 "ee8c00b44c6bc5cf40d301a109c28eeeef2aafde91a58e82952ac0348dbabbdf"
+      url "https://github.com/ldclabs/anda-bot/releases/download/v0.10.2/anda-linux-x86_64", using: :nounzip
+      sha256 "7d7cc65c4d7832f045001ac8f93cac371eafde5182a11422b8bdd9622715ac2d"
     end
   end
 
@@ -53,6 +53,9 @@ class Anda < Formula
       "Homebrew does not write runtime files into ~/.anda during install.",
       "To install or refresh curated skills, run:",
       "  anda update --skills",
+      "",
+      "After upgrading an already running daemon, restart it to use the new binary:",
+      "  anda restart",
     ]
 
     if OS.mac?
