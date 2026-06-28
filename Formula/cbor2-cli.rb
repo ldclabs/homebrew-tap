@@ -1,26 +1,26 @@
 class Cbor2Cli < Formula
   desc "CBOR command-line converter and diagnostic notation inspector"
   homepage "https://github.com/ldclabs/cbor2"
-  version "1.1.1"
+  version "1.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ldclabs/cbor2/releases/download/v1.1.1/cbor-macos-arm64", using: :nounzip
-      sha256 "3f07d704ccac34e3a572f6bdbfeb013105b4e9f8f73d8ee22eaae911f6b42812"
+      url "https://github.com/ldclabs/cbor2/releases/download/v1.1.2/cbor-macos-arm64", using: :nounzip
+      sha256 "05d79784a0d252cc9afbf0cfb81a95a8d22e008f04faae09a0503e8a38480278"
     else
-      url "https://github.com/ldclabs/cbor2/releases/download/v1.1.1/cbor-macos-x86_64", using: :nounzip
-      sha256 "192b8a74e5c0a96135fb222f08883db9445e1f59180ab6b8a764a75c582e70ee"
+      url "https://github.com/ldclabs/cbor2/releases/download/v1.1.2/cbor-macos-x86_64", using: :nounzip
+      sha256 "abfacc488bf37ad82890d8af2dd2ecc90c6644d00b6386df3634dd0e91674f92"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/ldclabs/cbor2/releases/download/v1.1.1/cbor-linux-arm64", using: :nounzip
-      sha256 "2be9d8fb31474ec0d3de4fb23032127750f8a34694da507b0ecd80a119cfadd6"
+      url "https://github.com/ldclabs/cbor2/releases/download/v1.1.2/cbor-linux-arm64", using: :nounzip
+      sha256 "c172060c3b2a89b310d505759d49584fb0993ec4df9912459df1f4ddbbb653d4"
     else
-      url "https://github.com/ldclabs/cbor2/releases/download/v1.1.1/cbor-linux-x86_64", using: :nounzip
-      sha256 "9b3f95f2b2ba79158ca618fedbcd63fc1d986928a45c37aa270cd18b0499742d"
+      url "https://github.com/ldclabs/cbor2/releases/download/v1.1.2/cbor-linux-x86_64", using: :nounzip
+      sha256 "9ee764f9db13adc76e40904ae206afc3d61c6ccd8d05da304dde92e9c0371e78"
     end
   end
 
