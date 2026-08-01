@@ -1,7 +1,6 @@
 class Anda < Formula
   desc "Local AI agent with a long-term memory brain"
   homepage "https://github.com/ldclabs/anda-bot"
-  version "0.11.6"
   license "Apache-2.0"
 
   on_macos do

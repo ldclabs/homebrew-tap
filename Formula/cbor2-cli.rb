@@ -1,7 +1,6 @@
 class Cbor2Cli < Formula
   desc "CBOR command-line converter and diagnostic notation inspector"
   homepage "https://github.com/ldclabs/cbor2"
-  version "1.1.4"
   license "MIT"
 
   on_macos do
