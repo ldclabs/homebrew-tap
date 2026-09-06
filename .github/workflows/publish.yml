@@ -15,8 +15,6 @@ jobs:
       contents: write
       issues: read
       pull-requests: write
-    env:
-      HOMEBREW_NO_REQUIRE_TAP_TRUST: "1"
     steps:
       - name: Set up Homebrew
         uses: Homebrew/actions/setup-homebrew@main
