@@ -5,21 +5,21 @@ class Cbor2Cli < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ldclabs/cbor2/releases/download/v1.1.4/cbor-macos-arm64", using: :nounzip
-      sha256 "187bdc0ace1d4d8d5754985f77eaff577bc068ee63f743e7c0152627326a105c"
+      url "https://github.com/ldclabs/cbor2/releases/download/v1.1.5/cbor-macos-arm64", using: :nounzip
+      sha256 "66e7f06f1b348dd50892636ed3c382bafa0f70e627b0a10812dc4ec20ea72fa5"
     else
-      url "https://github.com/ldclabs/cbor2/releases/download/v1.1.4/cbor-macos-x86_64", using: :nounzip
-      sha256 "88b442c8a3455010ff681dcbd19037cc167b6a433e34b39cf182b17a2b3771d4"
+      url "https://github.com/ldclabs/cbor2/releases/download/v1.1.5/cbor-macos-x86_64", using: :nounzip
+      sha256 "80903d554fe8de74a5c4dae1b9433bf895eed16265f795925868fc52beaf322f"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/ldclabs/cbor2/releases/download/v1.1.4/cbor-linux-arm64", using: :nounzip
-      sha256 "d7fb57f7a65b66f5cca37edd554d3f72271319be4d98fc11947e583eaf1cf67b"
+      url "https://github.com/ldclabs/cbor2/releases/download/v1.1.5/cbor-linux-arm64", using: :nounzip
+      sha256 "20b5ea6cf33e72ab152dae9283217fd10ec4bbc07dbab98b58c2fee8673c0f26"
     else
-      url "https://github.com/ldclabs/cbor2/releases/download/v1.1.4/cbor-linux-x86_64", using: :nounzip
-      sha256 "0b989c6d73bbff6d7ff8f580c7c615331bbab739b36f6bef7c6e841e5c116dc5"
+      url "https://github.com/ldclabs/cbor2/releases/download/v1.1.5/cbor-linux-x86_64", using: :nounzip
+      sha256 "db01a0477a0448f2d1c6b5e81edae91af379ac5714cf165826e224f765a20d9c"
     end
   end
 
@@ -31,6 +31,6 @@ class Cbor2Cli < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/cbor --version")
-    assert_match "{1: 2}", shell_output("#{bin}/cbor a10102")
+    assert_match /\{\s+1: 2\s+\}/, shell_output("#{bin}/cbor a10102")
   end
 end
