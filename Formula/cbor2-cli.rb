@@ -31,6 +31,6 @@ class Cbor2Cli < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/cbor --version")
-    assert_match /\{\s+1: 2\s+\}/, shell_output("#{bin}/cbor a10102")
+    assert_match(/\{\s+1: 2\s+\}/, shell_output("#{bin}/cbor a10102"))
   end
 end
