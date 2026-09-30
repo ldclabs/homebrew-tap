@@ -5,31 +5,31 @@ class Anda < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ldclabs/anda-bot/releases/download/v0.12.0/anda-macos-arm64", using: :nounzip
-      sha256 "cbcdf651ee1fdb78352cfedf415a448be340e76498e258666e153823e94cc87c"
+      url "https://github.com/ldclabs/anda-bot/releases/download/v0.13.0/anda-macos-arm64", using: :nounzip
+      sha256 "eeb958dd7f0fba106b99b876becd3a5a8b7ea95b5dc80cdaffd385143f8866b1"
 
       resource "anda_launcher" do
-        url "https://github.com/ldclabs/anda-bot/releases/download/v0.12.0/anda_launcher-macos-arm64", using: :nounzip
-        sha256 "35efca16ec1bd1e8bad5988b376e4cacb034a1d2ce6ec9dd61a57d3f9a44b585"
+        url "https://github.com/ldclabs/anda-bot/releases/download/v0.13.0/anda_launcher-macos-arm64", using: :nounzip
+        sha256 "133534cfada5643734f82468ef42e1bb6e7e04e7803f96d8b2a6849eff7cd4de"
       end
     else
-      url "https://github.com/ldclabs/anda-bot/releases/download/v0.12.0/anda-macos-x86_64", using: :nounzip
-      sha256 "0892ad0c92f1c3b92a2aefe13cab67a2efaabb7686ca35544cd0d474c02d01d0"
+      url "https://github.com/ldclabs/anda-bot/releases/download/v0.13.0/anda-macos-x86_64", using: :nounzip
+      sha256 "2e3633c4c59e6a238b6e7afebd359cfc73ef9cdcbed0b895ea63a867e013f217"
 
       resource "anda_launcher" do
-        url "https://github.com/ldclabs/anda-bot/releases/download/v0.12.0/anda_launcher-macos-x86_64", using: :nounzip
-        sha256 "25180e6ca8c6cfaff1922532083909eddc2227524b217da04074520fb627046f"
+        url "https://github.com/ldclabs/anda-bot/releases/download/v0.13.0/anda_launcher-macos-x86_64", using: :nounzip
+        sha256 "747214f7b6b19cbf05bb7ee6d2ccb8cfaf07996b21a520ef415e78bfb7d28d26"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/ldclabs/anda-bot/releases/download/v0.12.0/anda-linux-arm64", using: :nounzip
-      sha256 "5b11a0521f0f014a4fbcf5457b7c749b811f8ae7902af7eab2eecd8205595da0"
+      url "https://github.com/ldclabs/anda-bot/releases/download/v0.13.0/anda-linux-arm64", using: :nounzip
+      sha256 "16d2d336b7a5332f441a50264a169100e2a6bfa47c7e174e107a776693d77dd7"
     else
-      url "https://github.com/ldclabs/anda-bot/releases/download/v0.12.0/anda-linux-x86_64", using: :nounzip
-      sha256 "b6bda69ff2f81f91b2139c12a6427c57ce5c62c6472ccca89f6be1a506b4bdd0"
+      url "https://github.com/ldclabs/anda-bot/releases/download/v0.13.0/anda-linux-x86_64", using: :nounzip
+      sha256 "f8ce95ed902f69128d99b2085184f5bcde02d83cad7dfda7475e2452401df96a"
     end
   end
 
@@ -60,9 +60,9 @@ class Anda < Formula
     if OS.mac?
       lines += [
         "",
-        "The macOS formula also installs the menu bar launcher:",
-        "  anda_launcher",
-        "Run it once to create or refresh ~/Applications/Anda Bot.app.",
+        "The tray, chat window and settings are in Anda Desktop, which uses this anda:",
+        "  brew install --cask ldclabs/tap/anda-desktop",
+        "anda_launcher only retires the old Anda Bot menu bar launcher and will be removed.",
       ]
     end
 
