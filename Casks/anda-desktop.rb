@@ -1,16 +1,14 @@
 cask "anda-desktop" do
-  arch arm: "arm64", intel: "x64"
+  version "0.13.1"
+  sha256 "fcd3372a16eda36736f09ca43f15afd4dd2e3f668b367d2391c8a597b6aa9589"
 
-  version "0.13.0"
-  sha256 arm:   "f06dcf20aa2c8477b3fa5f18e7563ffbe77171401683fd135af9921f62b710af",
-         intel: "e95d56ca09f94187b52baf0363576ab375bbcd7a3bf3ef3537f1dd9e94b27e71"
-
-  url "https://github.com/ldclabs/anda-bot/releases/download/v#{version}/Anda-mac-#{arch}.dmg"
+  url "https://github.com/ldclabs/anda-bot/releases/download/v#{version}/Anda-mac-arm64.dmg"
   name "Anda"
   desc "Desktop workspace and tray for the Anda local AI agent"
   homepage "https://anda.bot/"
 
   auto_updates true
+  depends_on arch: :arm64
   depends_on formula: "anda"
   depends_on :macos
 
