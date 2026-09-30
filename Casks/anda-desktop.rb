@@ -8,10 +8,11 @@ cask "anda-desktop" do
   url "https://github.com/ldclabs/anda-bot/releases/download/v#{version}/Anda-mac-#{arch}.dmg"
   name "Anda"
   desc "Desktop workspace and tray for the Anda local AI agent"
-  homepage "https://anda.bot"
+  homepage "https://anda.bot/"
 
   auto_updates true
   depends_on formula: "anda"
+  depends_on :macos
 
   app "Anda.app"
 
