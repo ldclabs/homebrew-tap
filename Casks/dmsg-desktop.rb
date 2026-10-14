@@ -5,7 +5,7 @@ cask "dmsg-desktop" do
   url "https://github.com/ldclabs/ic-panda/releases/download/dmsg-v#{version}/dMsg-mac-arm64.dmg"
   name "dMsg"
   desc "Desktop workspace and approvals for dMsg"
-  homepage "https://dmsg.net"
+  homepage "https://dmsg.net/"
 
   auto_updates true
   depends_on arch: :arm64

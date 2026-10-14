@@ -1,6 +1,6 @@
 class Dmsg < Formula
-  desc "dMsg client: CLI and daemon for the private dMsg workspace and its agents"
-  homepage "https://dmsg.net"
+  desc "CLI and daemon for the private dMsg workspace and its agents"
+  homepage "https://dmsg.net/"
   url "https://github.com/ldclabs/ic-panda/releases/download/dmsg-v0.1.0/dmsg-macos-arm64", using: :nounzip
   version "0.1.0"
   sha256 "fa08fdd8d40a375fa1d0a1fbdb64b1fb833bd4ecf5484170305c1caaeead3f8d"
