@@ -1,9 +1,9 @@
 class Dmsg < Formula
   desc "CLI and daemon for the private dMsg workspace and its agents"
   homepage "https://dmsg.net/"
-  url "https://github.com/ldclabs/ic-panda/releases/download/dmsg-v0.1.0/dmsg-macos-arm64", using: :nounzip
-  version "0.1.0"
-  sha256 "fa08fdd8d40a375fa1d0a1fbdb64b1fb833bd4ecf5484170305c1caaeead3f8d"
+  url "https://github.com/ldclabs/ic-panda/releases/download/dmsg-v0.2.0/dmsg-macos-arm64", using: :nounzip
+  version "0.2.0"
+  sha256 "50d2d387a1698653189bf580213ce29136019f3df6664b1f0444e9def2c0fa7e"
   license "Apache-2.0"
 
   on_macos do
@@ -12,12 +12,12 @@ class Dmsg < Formula
 
   on_linux do
     on_arm do
-      url "https://github.com/ldclabs/ic-panda/releases/download/dmsg-v0.1.0/dmsg-linux-arm64", using: :nounzip
-      sha256 "23298d2cae563c7e0a3cc947f16a3b6b71f53ddf4afe21c1ac33091a3ca0b48c"
+      url "https://github.com/ldclabs/ic-panda/releases/download/dmsg-v0.2.0/dmsg-linux-arm64", using: :nounzip
+      sha256 "8ca3938c7b86fc7427829fe1ebbd2da97c72e25eddc0e3ac55a2821f0633de83"
     end
     on_intel do
-      url "https://github.com/ldclabs/ic-panda/releases/download/dmsg-v0.1.0/dmsg-linux-x86_64", using: :nounzip
-      sha256 "a47fc5027cfe2c13402c1859e1d6082cab4e9d4397189cdd56081fb1110550ab"
+      url "https://github.com/ldclabs/ic-panda/releases/download/dmsg-v0.2.0/dmsg-linux-x86_64", using: :nounzip
+      sha256 "08ccb9a1ebcceec712a97058d1357e2bc3fd8d9d9a1c210e6c8fa5d8359d88f5"
     end
   end
 
@@ -29,7 +29,8 @@ class Dmsg < Formula
 
   def caveats
     <<~TEXT
-      Write ~/.dmsg/config.toml, then start the daemon and log in:
+      Start the daemon and log in (production; ~/.dmsg/config.toml picks
+      another deployment):
         dmsg start && dmsg login
       After an upgrade, restart a running daemon to use the new binary:
         dmsg restart
