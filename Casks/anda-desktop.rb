@@ -1,6 +1,6 @@
 cask "anda-desktop" do
-  version "0.14.6"
-  sha256 "c813ee54e02c25b54912c35a45629484f0f2450f762b03438b494bb183611689"
+  version "0.14.7"
+  sha256 "1c4f223be186936aaba91e54974e6ad02759d9deb5df5d2a7c5eadaa93cd7296"
 
   url "https://github.com/ldclabs/anda-bot/releases/download/v#{version}/Anda-mac-arm64.dmg"
   name "Anda"
