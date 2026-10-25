@@ -1,6 +1,6 @@
 cask "dmsg-desktop" do
-  version "1.0.2"
-  sha256 "a8c440a002082c317ba19f562bac7c88d7e2bb710d481f75dc10c9688a4d65bc"
+  version "1.1.0"
+  sha256 "392fe58fc830fd3a3fd27c21d01fc8c9a3feef2bcbabe0dbc322f011589aa7fe"
 
   url "https://github.com/ldclabs/ic-panda/releases/download/dmsg-v#{version}/dMsg-mac-arm64.dmg"
   name "dMsg"
