@@ -2,7 +2,6 @@ class Dmsg < Formula
   desc "CLI and daemon for the private dMsg workspace and its agents"
   homepage "https://dmsg.net/"
   url "https://github.com/ldclabs/ic-panda/releases/download/1.3.0/dmsg-macos-arm64", using: :nounzip
-  version "1.3.0"
   sha256 "04730a307af7c64843d856e66b2906f2c26462779e980004200102e331331ff5"
   license "Apache-2.0"
 
