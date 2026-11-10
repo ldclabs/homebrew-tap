@@ -1,8 +1,8 @@
 class Dmsg < Formula
   desc "CLI and daemon for the private dMsg workspace and its agents"
   homepage "https://dmsg.net/"
-  url "https://github.com/ldclabs/ic-panda/releases/download/1.5.1/dmsg-macos-arm64", using: :nounzip
-  sha256 "cb01180af677980b1eddcce131bb9f3496990cc5e148561da37e33d9b3a46b01"
+  url "https://github.com/ldclabs/ic-panda/releases/download/1.5.2/dmsg-macos-arm64", using: :nounzip
+  sha256 "4019b85c20128295579c96ce06f01e769c0256467017c2141cfd6127fec3128a"
   license "Apache-2.0"
 
   on_macos do
@@ -11,12 +11,12 @@ class Dmsg < Formula
 
   on_linux do
     on_arm do
-      url "https://github.com/ldclabs/ic-panda/releases/download/1.5.1/dmsg-linux-arm64", using: :nounzip
-      sha256 "eb17e0fcbf787491f41c6747a798a655c7712a2d1fd2b031fed7c6a1622f655e"
+      url "https://github.com/ldclabs/ic-panda/releases/download/1.5.2/dmsg-linux-arm64", using: :nounzip
+      sha256 "a3688f3638330ccb2c0d900d2ba561264845df54b795260fa4e44a4df90cb097"
     end
     on_intel do
-      url "https://github.com/ldclabs/ic-panda/releases/download/1.5.1/dmsg-linux-x86_64", using: :nounzip
-      sha256 "d41588fbe77664e5210e38d5c9c0f931a8de9d448b8798f76b054169e6185c5f"
+      url "https://github.com/ldclabs/ic-panda/releases/download/1.5.2/dmsg-linux-x86_64", using: :nounzip
+      sha256 "911dcc60c7d09454e9820ddefb52ec5f4447ac963f020b1810baf6e6f2c909e4"
     end
   end
 
