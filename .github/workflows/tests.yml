@@ -10,7 +10,8 @@ jobs:
   test-bot:
     strategy:
       matrix:
-        os: [macos-15-intel, macos-26]
+        # The dMsg and Anda packages for macOS require Apple Silicon.
+        os: [macos-26]
         include:
           - os: ubuntu-latest
             container: ghcr.io/homebrew/brew:main
