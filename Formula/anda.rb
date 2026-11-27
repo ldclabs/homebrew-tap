@@ -1,27 +1,27 @@
 class Anda < Formula
   desc "Local AI agent with a long-term memory brain"
   homepage "https://github.com/ldclabs/anda-bot"
-  url "https://github.com/ldclabs/anda-bot/releases/download/v0.16.0/anda-macos-arm64", using: :nounzip
-  sha256 "cd013b2f5aad341280763d54f8555b98fb005dd7cf4903f12febd629a5564f55"
+  url "https://github.com/ldclabs/anda-bot/releases/download/v0.16.1/anda-macos-arm64", using: :nounzip
+  sha256 "e516e44546ba39176d2a7ac2da30b56fece7912ba160f4bcfdc0c395163a6582"
   license "Apache-2.0"
 
   on_macos do
     depends_on arch: :arm64
 
     resource "anda_launcher" do
-      url "https://github.com/ldclabs/anda-bot/releases/download/v0.16.0/anda_launcher-macos-arm64", using: :nounzip
-      sha256 "3a7b8db28ec1cba849dfc5924830e5fa47e14f306f5e841126485ec9ea9a85ae"
+      url "https://github.com/ldclabs/anda-bot/releases/download/v0.16.1/anda_launcher-macos-arm64", using: :nounzip
+      sha256 "a51732c269a9036496aa60a184042c0dd0e8cfdfc3961e9ccba44eae60b5dd71"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/ldclabs/anda-bot/releases/download/v0.16.0/anda-linux-arm64", using: :nounzip
-      sha256 "f8c8825ceef8bfc880bca9537c9983046004029df5ab1661c5f5b666807a14b3"
+      url "https://github.com/ldclabs/anda-bot/releases/download/v0.16.1/anda-linux-arm64", using: :nounzip
+      sha256 "f12cefa093a76fced051f038bbd061be339bc2c3c23876c05b6b1dc4a94aa3cd"
     end
     on_intel do
-      url "https://github.com/ldclabs/anda-bot/releases/download/v0.16.0/anda-linux-x86_64", using: :nounzip
-      sha256 "6de052d2e6cd698af93ab8c9239ffc3042d34e4c1f70561bc65ae7dde0a33344"
+      url "https://github.com/ldclabs/anda-bot/releases/download/v0.16.1/anda-linux-x86_64", using: :nounzip
+      sha256 "edd48e3c75457c2eb1c7501b546f9ad54a59f3d6d446d8c5a7d9b6c6cbbf02b0"
     end
   end
 
